@@ -1,3 +1,4 @@
-#Project 2:
+#Project 2: Git Repository Links
 
-Link to the Git Repository.
+This git repository has four branches poiniting to the individual calculator code.
+The master branch has the basic calculator program running with the full pylint coverage.
