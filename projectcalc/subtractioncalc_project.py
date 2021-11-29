@@ -2,6 +2,7 @@
 
 from projectcalc.calculation_project import Calculation
 
+#Implementation of the Inheritance Feature
 class Subtractioncalc(Calculation):
     """Defining the calculator class for subtracting two numbers"""
 

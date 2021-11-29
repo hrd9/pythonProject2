@@ -2,6 +2,7 @@
 
 from projectcalc.calculation_project import Calculation
 
+#Implementation of the Inheritance Feature
 class Divisioncalc(Calculation):
     """Defining the calculator class for dividing two numbers"""
 
