@@ -1,6 +1,8 @@
 """Class for testing the calculation operation for project 2"""
 import pytest
 from projectcalculator.maincalculator import Calculator
+from projectcalc.triangle_project import TriangleCalc
+from projectcalc.circlecalc_project import CircleCalc
 
 # Defining the Fixture
 @pytest.fixture
@@ -35,3 +37,11 @@ def test_project_calculator_divide(clear_history):
     """Testing the division operation"""
     assert Calculator.divide_operation(8, 4) == 2
     assert Calculator.divide_operation(50, 10) == 5
+
+def test_project_triangle():
+    """Testing triangle function"""
+    assert TriangleCalc.getresult(10,20) == 100
+
+def test_project_circle():
+    """Testing the area of the circle"""
+    assert CircleCalc.getresult(10) == 314
