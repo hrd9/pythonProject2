@@ -24,6 +24,7 @@ class Calculator:
         """ Creating History method for clearing the calc history"""
         Calculator.temp_hist.clear()
 
+    # Implementation of the Polymorphism Feature
     @staticmethod
     def add_operation(value_a, value_b):
         """Calling the addition method for performing operation"""
@@ -31,6 +32,7 @@ class Calculator:
         Calculator.add_operation_to_history(addition)
         return Calculator.get_last_operation_added()
 
+    # Implementation of the Polymorphism Feature
     @staticmethod
     def sub_operation(value_a, value_b):
         """Calling the subtraction method for performing operation"""
@@ -38,6 +40,7 @@ class Calculator:
         Calculator.add_operation_to_history(subtraction)
         return Calculator.get_last_operation_added()
 
+    # Implementation of the Polymorphism Feature
     @staticmethod
     def multiply_operation(value_a, value_b):
         """Calling the multiply method for performing operation"""
@@ -45,6 +48,7 @@ class Calculator:
         Calculator.add_operation_to_history(multiply)
         return Calculator.get_last_operation_added()
 
+    # Implementation of the Abstraction Feature
     @staticmethod
     def divide_operation(value_a, value_b):
         """Calling the division method for performing operation"""
