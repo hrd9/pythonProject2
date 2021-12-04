@@ -3,7 +3,7 @@
 class Calculation:
     """Calculation Constructor"""
     # pylint: disable=too-few-public-methods
-
+    # Implementation of abstract methods
     def __init__(self, value_a, value_b):
         """Self references"""
         self.value_a = value_a

@@ -38,6 +38,7 @@ class Calculator:
         Calculator.add_operation_to_history(subtraction)
         return Calculator.get_last_operation_added()
 
+    # Implementing Factory Method
     @staticmethod
     def multiply_operation(value_a, value_b):
         """Calling the multiply method for performing operation"""
@@ -45,6 +46,7 @@ class Calculator:
         Calculator.add_operation_to_history(multiply)
         return Calculator.get_last_operation_added()
 
+    #Implementing Factory Method
     @staticmethod
     def divide_operation(value_a, value_b):
         """Calling the division method for performing operation"""
