@@ -3,51 +3,57 @@ from projectcalc.additioncalc_project import Additioncalc
 from projectcalc.subtractioncalc_project import Subtractioncalc
 from projectcalc.multiplicationcalc_project import Multiplicationcalc
 from projectcalc.divisioncalc_project import Divisioncalc
+from projectcalc.history_project import History
+from file_handler.read_csv import CSVFileRead
+
 
 class Calculator:
     """Calling the calculator methods for performing operation"""
 
-    temp_hist = []
+    temp = []
+    data = []
+    path = ''
+
+    def __init__(self, path):
+        self.data = CSVFileRead.read_userdata(path)
+        self.path = path
+
+    def get_userdata(self):
+        """Taking the user data"""
+        csv_userdata = self.data
+        a = csv_userdata['a'].values
+        b = csv_userdata['b'].values
+        add_result = [round(i,3) for i in csv_userdata['add_result'].values]
+        sub_result = [round(i,3) for i in csv_userdata['sub_result'].values]
+        multiply_result = [round(i,3) for i in csv_userdata['multiply_result'].values]
+        divide_result = [round(i,3) for i in csv_userdata['div_result'].values]
+
+        return a, b, add_result, sub_result, multiply_result, divide_result
 
     @staticmethod
-    def get_last_operation_added():
-        """ Gets last calculation from history array """
-        return Calculator.temp_hist[-1]
+    def add_operation(*args):
+        """Performing addition operation"""
+        add = Additioncalc(args).getoutput()
+        History.add_calculation_history(add)
+        return History.get_last_calculation()
 
     @staticmethod
-    def add_operation_to_history(calculation):
-        """ Appends calculation to history array """
-        Calculator.temp_hist.append(calculation)
+    def sub_operation(*args):
+        """Performing subtraction operation"""
+        sub = Subtractioncalc(args).getoutput()
+        History.add_calculation_history(sub)
+        return History.get_last_calculation()
 
     @staticmethod
-    def clear_history():
-        """ Creating History method for clearing the calc history"""
-        Calculator.temp_hist.clear()
+    def multiply_operation(*args):
+        """Performing multiply operation"""
+        mul = Multiplicationcalc(args).getoutput()
+        History.add_calculation_history(mul)
+        return History.get_last_calculation()
 
     @staticmethod
-    def add_operation(value_a, value_b):
-        """Calling the addition method for performing operation"""
-        addition = Additioncalc.create(value_a,value_b).getoutput()
-        Calculator.add_operation_to_history(addition)
-        return Calculator.get_last_operation_added()
-
-    @staticmethod
-    def sub_operation(value_a, value_b):
-        """Calling the subtraction method for performing operation"""
-        subtraction = Subtractioncalc.create(value_a, value_b).getoutput()
-        Calculator.add_operation_to_history(subtraction)
-        return Calculator.get_last_operation_added()
-
-    @staticmethod
-    def multiply_operation(value_a, value_b):
-        """Calling the multiply method for performing operation"""
-        multiply = Multiplicationcalc.create(value_a, value_b).getoutput()
-        Calculator.add_operation_to_history(multiply)
-        return Calculator.get_last_operation_added()
-
-    @staticmethod
-    def divide_operation(value_a, value_b):
-        """Calling the division method for performing operation"""
-        division = Divisioncalc.create(value_a, value_b).getoutput()
-        Calculator.add_operation_to_history(division)
-        return Calculator.get_last_operation_added()
+    def divide_operation(*args):
+        """Performing divide operation"""
+        div = Divisioncalc(args).getoutput()
+        History.add_calculation_history(div)
+        return History.get_last_calculation()

@@ -6,5 +6,8 @@ class Divisioncalc(Calculation):
     """Defining the calculator class for dividing two numbers"""
 
     def getoutput(self):
-        """Performing the division operation"""
-        return self.value_a / self.value_b
+        """ Using self to reference the data contained in the object instance """
+        division_of_values = self.values[0]
+        for value in self.values[1:]:
+            division_of_values = division_of_values / value
+        return round(division_of_values, 3)

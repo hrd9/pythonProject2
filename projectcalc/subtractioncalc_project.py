@@ -6,5 +6,8 @@ class Subtractioncalc(Calculation):
     """Defining the calculator class for subtracting two numbers"""
 
     def getoutput(self):
-        """Performing the subtracting operation"""
-        return self.value_a - self.value_b
+        """ Using self to reference the data contained in the object instance """
+        subtraction_of_values = self.values[0]
+        for value in self.values[1:]:
+            subtraction_of_values = subtraction_of_values - value
+        return round(subtraction_of_values, 3)
