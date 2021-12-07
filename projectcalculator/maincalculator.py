@@ -1,4 +1,7 @@
 """Main Calculator Operation Class"""
+import logging
+import sys
+
 from projectcalc.additioncalc_project import Additioncalc
 from projectcalc.subtractioncalc_project import Subtractioncalc
 from projectcalc.multiplicationcalc_project import Multiplicationcalc
@@ -6,6 +9,21 @@ from projectcalc.divisioncalc_project import Divisioncalc
 from projectcalc.history_project import History
 from file_handler.read_csv import CSVFileRead
 
+sys.tracebacklimit = 0
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+formatter = logging.Formatter('%(asctime)s:%(name)s:%(message)s')
+
+fileproject_handler = logging.FileHandler('log/project.log')
+fileproject_handler.setLevel(logging.DEBUG)
+fileproject_handler.setFormatter(formatter)
+
+streamproject_handler = logging.StreamHandler()
+streamproject_handler.setFormatter(formatter)
+
+logger.addHandler(fileproject_handler)
+logger.addHandler(streamproject_handler)
 
 class Calculator:
     """Calling the calculator methods for performing operation"""
@@ -49,6 +67,12 @@ class Calculator:
     @staticmethod
     def divide_operation(*args):
         """Performing divide operation"""
-        div = Divisioncalc(args).getoutput()
-        History.add_calculation_history(div)
-        return History.get_last_calculation()
+        try:
+            div = Divisioncalc(args).getoutput()
+            History.add_calculation_history(div)
+        except ZeroDivisionError as err:
+            logger.exception(err)
+            return 0.0
+        else:
+            logger.debug('Division : %f / %f = %f', args[0], args[1], div)
+            return History.get_last_calculation()

@@ -17,7 +17,7 @@ def test_project_calculator_addition(clear_history):
 
     for i in range(length):
         assert Calculator.add_operation(var_a[i], var_b[i] )== add_result[i]
-    assert History.get_count_of_operation() == 4
+    assert History.get_count_of_operation() == 5
     assert History.get_first_calculation() == add_result[0]
     assert History.get_last_calculation() == add_result[-1]
 
