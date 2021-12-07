@@ -10,10 +10,6 @@ from file_handler.read_csv import CSVFileRead
 class Calculator:
     """Calling the calculator methods for performing operation"""
 
-    temp = []
-    data = []
-    path = ''
-
     def __init__(self, path):
         self.data = CSVFileRead.read_userdata(path)
         self.path = path
@@ -21,14 +17,13 @@ class Calculator:
     def get_userdata(self):
         """Taking the user data"""
         csv_userdata = self.data
-        a = csv_userdata['a'].values
-        b = csv_userdata['b'].values
+        var_a = csv_userdata['a'].values
+        var_b = csv_userdata['b'].values
         add_result = [round(i,3) for i in csv_userdata['add_result'].values]
         sub_result = [round(i,3) for i in csv_userdata['sub_result'].values]
         multiply_result = [round(i,3) for i in csv_userdata['multiply_result'].values]
         divide_result = [round(i,3) for i in csv_userdata['div_result'].values]
-
-        return a, b, add_result, sub_result, multiply_result, divide_result
+        return var_a, var_b, add_result, sub_result, multiply_result, divide_result
 
     @staticmethod
     def add_operation(*args):
