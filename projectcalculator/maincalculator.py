@@ -31,3 +31,8 @@ class Calculator:
         """Performing division operation"""
         History.add_calculation_history(tuple_values)
         return True
+
+    @staticmethod
+    def get_last_value():
+        """result of the calculation"""
+        return History.get_last_calculation()
