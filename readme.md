@@ -12,4 +12,9 @@
 
 ![image](https://user-images.githubusercontent.com/90420151/146128785-5c8ca91e-2d5c-483f-a417-9c2d3385dbed.png)
 
+4) Final Output for Beautiful tables with all calculator operation, calculator history values & well-designed tables:
+
+![image](https://user-images.githubusercontent.com/90420151/146259333-e8cba98a-1c79-438f-9724-7fbfb8e7dd00.png)
+
+
 
