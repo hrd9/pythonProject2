@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/90420151/146112093-00a6f949-2822-45da-bb37-032757b1c225.png)
 
-2) Beautiful Table generated after performing operation (single operation):
+2) Normal Table generated after performing operation (single operation):
 
 ![image](https://user-images.githubusercontent.com/90420151/146129353-c7ae88f1-b06b-470b-8405-fe4e7de12a6d.png)
 
