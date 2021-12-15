@@ -6,7 +6,7 @@
 
 2) Beautiful Table generated after performing operation (single operation):
 
-![image](https://user-images.githubusercontent.com/90420151/146111953-f60d292b-a0e7-4008-a593-b236d7d9d669.p
+![image](https://user-images.githubusercontent.com/90420151/146129353-c7ae88f1-b06b-470b-8405-fe4e7de12a6d.png)
 
 3) Beautiful Table generated after performing multiple operation (history values):
 
