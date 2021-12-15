@@ -1,12 +1,42 @@
 {% extends "base.html" %}
 {% block title %}Result{% endblock %}
-
-
+<style>
+th, td {
+  border-style:solid;
+  border-color: #96D4D4;
+}
+</style>
 {% block content %}
-    <h1>Result</h1>
-    <strong>Value 1: </strong> {{ value1 }} <br>
-    <strong>Value 2: </strong> {{ value2 }} <br>
-    <strong>Operation: </strong> {{ operation }} <br>
-    <strong>Result: </strong> {{ result }}
+
+<h1>Result</h1>
+<strong>Value 1: </strong> {{ value1 }} <br>
+<strong>Value 2: </strong> {{ value2 }} <br>
+<strong>Operation: </strong> {{ operation }}
+<br>
+<strong>Calculation Result: </strong> {{ result }}
+<br>
+
+<table border="1" bgcolor="#87cefa" >
+    <thead>
+      <h3>Calculation Result Table :</h3>
+      <tr>
+        <th>Value1</th>
+        <th>Value2</th>
+        <th>Operation</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for item in hist %}
+        <tr>
+            <td>{{ hist.index(item) }}</td>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+  </table>
 
 {% endblock %}

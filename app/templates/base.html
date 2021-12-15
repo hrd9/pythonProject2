@@ -109,6 +109,7 @@
                     style="float:right">&times;</span></a>
         </div>
         {% endfor %}
+
         {% endif %}
         {% endwith %}
 
@@ -123,6 +124,10 @@
     </div>
 </div>
 
+<div class="text-center">
+            {% block content %}{% endblock %}
+        </div>
+
 <div class="footer">
  <p style="color: wheat;display: block; margin: auto;">© 2021 Copyright: Harsh Rajesh Damania</p>
     <h4  style="color: wheat;display: block; margin: auto;">Connecting the World Digitally !</h4>
@@ -134,6 +139,10 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.sticky.js"></script>
 <script src="js/main.js"></script>
+
+$(document).ready(function () {
+        $('#data').DataTable();
+    });
 
 </body>
 </html>
