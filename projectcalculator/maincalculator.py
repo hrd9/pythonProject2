@@ -11,25 +11,25 @@ class Calculator:
     @staticmethod
     def add_operation(tuple_values : tuple):
         """Performing addition operation"""
-        History.add_calculation_history(tuple_values)
+        History.add_calculation_history(Additioncalc.create(tuple_values).getoutput())
         return True
 
     @staticmethod
     def sub_operation(tuple_values : tuple):
         """Performing subtraction operation"""
-        History.add_calculation_history(tuple_values)
+        History.add_calculation_history(Subtractioncalc.create(tuple_values).getoutput())
         return True
 
     @staticmethod
     def multiply_operation(tuple_values : tuple):
         """Performing multiplication operation"""
-        History.add_calculation_history(tuple_values)
+        History.add_calculation_history(Multiplicationcalc.create(tuple_values).getoutput())
         return True
 
     @staticmethod
     def divide_operation(tuple_values : tuple):
         """Performing division operation"""
-        History.add_calculation_history(tuple_values)
+        History.add_calculation_history(Divisioncalc.create(tuple_values).getoutput())
         return True
 
     @staticmethod
