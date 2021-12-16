@@ -1,10 +1,15 @@
-# Calculator Project Setup
-[![Build Status](https://app.travis-ci.com/kaw393939/calc2.svg?branch=main)](https://app.travis-ci.com/kaw393939/calc2)
+# IS601 : Web Calculator Project 
 
-To run tests, Lint, and Coverage report use this command:
+#Azure Link : https://hrd9project3webcalc.eastus.azurecontainer.io/
 
-pytest  --pylint --cov
+#Git Repository Links:
 
-.pylintrc is the config for pylint
-.coveragerc is the config for coverage
-setup.py is a config file for pytest
+1) Part 1 : Flask Validation Messages
+
+https://github.com/hrd9/pythonProject2/tree/Branch6_webCalculation
+
+2) Part 2 : Beautiful Tables 
+
+https://github.com/hrd9/pythonProject2/tree/Branch7_Tables
+
+3) Part 3 : CSV Handling,Integration of final project in this repository.
