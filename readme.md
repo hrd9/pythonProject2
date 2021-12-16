@@ -23,7 +23,7 @@
 3)Result Page Operations:
 ![image](https://user-images.githubusercontent.com/90420151/146295518-985e83a0-9c3a-4bc2-9f10-a0fe01805f7d.png)
 
-4)Four Templates : Inventors, Evolution, Pylint & AAA Testing are added in this repository.
+4)Four Templates : Inventors, Evolution from project 1 &  Pylint & AAA Testing from project 2 are added as templates to our project 3
 
 5)Flask Validation & Beautiful Tables snapshots are attached in this repository:
 
@@ -38,3 +38,7 @@ https://github.com/hrd9/pythonProject2/tree/Branch6_webCalculation
 https://github.com/hrd9/pythonProject2/tree/Branch7_Tables
 
 3) Part 3 : CSV Handling,Integration of final project in this repository.
+
+https://github.com/hrd9/pythonProject2/edit/Branch8_project3
+
+
