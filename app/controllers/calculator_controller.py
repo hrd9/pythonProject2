@@ -18,7 +18,7 @@ class CalculatorController(ControllerBase):
             flash('The value of field 1 needs to be inserted')
         elif request.form['value2'] == '':
             flash('The value of field 2 needs to be inserted')
-        elif request.form['value2'] == '0' and operation == 'division' :
+        elif request.form['value2'] == '0' and operation == 'divide_operation' :
             flash('Division by Zero Exception occurred !!')
         else:
             flash('Operation performed successfully !!!!')
@@ -31,7 +31,7 @@ class CalculatorController(ControllerBase):
 
             #CSV Write logic
             calc_obj = {'Value1': [value1], 'Value2': [value2], 'Operation': [operation], 'Result': [result]}
-            df = pd.Dataframe(calc_obj, columns=['Value1', 'Value2', 'Operation', 'Result'])
+            df = pd.DataFrame(calc_obj, columns=['Value1', 'Value2', 'Operation', 'Result'])
             df.to_csv('projectoutput.csv', mode='a', index=False, header=False, sep=',')
 
             hist = pd.read_csv('projectoutput.csv', skiprows=1).values.tolist()

@@ -1,42 +1,79 @@
 {% extends "base.html" %}
 {% block title %}Result{% endblock %}
-<style>
-th, td {
-  border-style:solid;
-  border-color: #96D4D4;
-}
-</style>
-{% block content %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<h1>Result</h1>
-<strong>Value 1: </strong> {{ value1 }} <br>
-<strong>Value 2: </strong> {{ value2 }} <br>
-<strong>Operation: </strong> {{ operation }}
-<br>
-<strong>Calculation Result: </strong> {{ result }}
-<br>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 
-<table border="1" bgcolor="#87cefa" >
-    <thead>
-      <h3>Calculation Result Table :</h3>
-      <tr>
-        <th>Value1</th>
-        <th>Value2</th>
-        <th>Operation</th>
-        <th>Result</th>
-      </tr>
-    </thead>
-    <tbody>
-        {% for item in hist %}
-        <tr>
-            <td>{{ hist.index(item) }}</td>
-            <td>{{ item[0] }}</td>
-            <td>{{ item[1] }}</td>
-            <td>{{ item[2] }}</td>
-            <td>{{ item[3] }}</td>
-        </tr>
-        {% endfor %}
-        </tbody>
-  </table>
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-{% endblock %}
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}"/>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}"/>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
+
+    <title>Project 3 : Web Calculator</title>
+    {% block content %}
+
+    <h1>Result</h1>
+    <strong>Value 1: </strong> {{ value1 }} <br>
+    <strong>Value 2: </strong> {{ value2 }} <br>
+    <strong>Operation: </strong> {{ operation }}
+    <br>
+    <strong>Calculation Result: </strong> {{ result }}
+    <br>
+
+
+<div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+</div>
+
+    <div class="id">
+        <h3><u>Calculation Result Table:</u></h3>
+        <table id="data" class="dataTable cell-border">
+
+            <thead>
+            <tr class="table-hover">
+                <th>Input 1</th>
+                <th>Input 2</th>
+                <th>Calculation Operation</th>
+                <th>Calculation Result</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for item in hist %}
+            <tr>
+                <td class="table-primary">{{ item[0] }}</td>
+                <td class="table-success">{{ item[1] }}</td>
+                <td class="table-danger">{{ item[2] }}</td>
+                <td class="table-info">{{ item[3] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/main.js"></script>
+
+
+    {% endblock %}

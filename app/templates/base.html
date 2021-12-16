@@ -10,39 +10,44 @@
     <!-- Style -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
 
-    <link rel= "stylesheet" type= "text/css" href= "css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 
 
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}"/>
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}"/>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
 
     <title>Project 3 : Web Calculator</title>
 
     <style>
-        #msgalert{
-           background-color: #00dd00;
+        #msgalert {
+            background-color: #00dd00;
         }
 
         a:hover {
             background-color: #E74C3C;
-            border-color:black;
+            border-color: black;
             font-size: 20px;
             font-weight: bolder;
         }
+
         /* Clear floats after the columns */
         .row:after {
             display: table;
             clear: both;
             border: #005cbf;
-        }.imagelogo{
-                      width: 55px;
-                  }
+        }
+
+        .imagelogo {
+            width: 100px;
+        }
     </style>
 </head>
 <body>
@@ -56,12 +61,15 @@
     <div class="site-mobile-menu-body"></div>
 </div>
 
+<header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
 
 <div class="top-bar">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <a href="#" class=""><span class="mr-2  icon-envelope-open-o"></span> <span class="d-none d-md-inline-block">historyofinternet@njit.com</span></a>
+                <a href="#" class=""><span class="mr-2  icon-envelope-open-o"></span> <span
+                        class="d-none d-md-inline-block">historyofinternet@njit.com</span></a>
 
             </div>
 
@@ -77,8 +85,9 @@
             <div class="site-logo">
                 <div class="logo">
 
-                    <img src="{{ url_for('static', filename='images/webcalclogo.jfif') }}" alt="image" class="imagelogo">
-
+                    <img src="{{ url_for('static', filename='images/webcalclogo.jfif') }}" alt="image"
+                         class="imagelogo">
+                    <span class="text-primary" size="10">Web Calculator</span>
 
                 </div>
             </div>
@@ -87,51 +96,53 @@
                 <nav class="site-navigation text-right ml-auto " role="navigation">
 
                     <ol class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                         <li class="nav-item">
-                    <a class="nav-link" href="/basicform">Basic HTML Form</a>
-                          </li>
-						<li><a href="AAAarticle.html" class="nav-link">AAA Testing</a></li>
-						<li><a href="pythonarticles.html" class="nav-link">Python Articles</a></li>
+                        <li><a href="/index.html" class="nav-link">Home</a></li>
+                        <li><a href="/inventors" class="nav-link">Inventors</a></li>
+                        <li><a href="/evolution" class="nav-link">Evolution</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/basicform">Web Calc</a>
+                        </li>
+                        <li><a href="/pylint" class="nav-link">Pylint Article</a></li>
+                        <li><a href="/aaatesting" class="nav-link">AAA Testing</a></li>
+
                     </ol>
                 </nav>
             </div>
-
+</header>
             <div class="col-12">
 
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for message in messages %}
-        <div class="alert alert-warning alert-dismissible" role="alert" id="msgalert">
-            {{ message }}
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible" role="alert" id="msgalert">
+                    {{ message }}
 
-            <a href="#" class="close" data-dismiss="alert" aria-label="close"><span
-                    style="float:right">&times;</span></a>
-        </div>
-        {% endfor %}
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close"><span
+                            style="float:right">&times;</span></a>
+                </div>
+                {% endfor %}
 
-        {% endif %}
-        {% endwith %}
-
-        <div class="text-center">
-            {% block content %}{% endblock %}
-        </div>
+                {% endif %}
+                {% endwith %}
             </div>
 
-            <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+            <div class="toggle-button d-inline-block d-lg-none"><a href="#"
+                                                                   class="site-menu-toggle py-5 js-menu-toggle text-black"><span
+                    class="icon-menu h3"></span></a></div>
 
         </div>
     </div>
 </div>
 
 <div class="text-center">
-            {% block content %}{% endblock %}
-        </div>
+    {% block content %}{% endblock %}
+</div>
 
 <div class="footer">
- <p style="color: wheat;display: block; margin: auto;">© 2021 Copyright: Harsh Rajesh Damania</p>
-    <h4  style="color: wheat;display: block; margin: auto;">Connecting the World Digitally !</h4>
-    <img src="{{ url_for('static', filename='images/GitHub-icon.png') }}" alt="github"><a href="https://github.com/hrd9/pythonProject2/tree/Branch4_DesignPatterns" style="color: navajowhite"> GitHub</a>
+    <p style="color: wheat;display: block; margin: auto;">© 2021 Copyright: Harsh Rajesh Damania</p>
+    <h4 style="color: wheat;display: block; margin: auto;">Connecting the World Digitally !</h4>
+    <img src="{{ url_for('static', filename='images/GitHub-icon.png') }}" alt="github"><a
+        href="https://github.com/hrd9/pythonProject2/tree/Branch8_project3" style="color: navajowhite"> GitHub</a>
 </div>
 
 <script src="js/jquery-3.3.1.min.js"></script>
@@ -139,10 +150,12 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.sticky.js"></script>
 <script src="js/main.js"></script>
-
-$(document).ready(function () {
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
         $('#data').DataTable();
     });
+</script>
 
 </body>
 </html>

@@ -1,0 +1,10 @@
+100,20,sub_operation,80.0
+50,2,divide_operation,25.0
+60,30,add_operation,90.0
+100,200,multiply_operation,20000.0
+85,5,divide_operation,17.0
+150,45,multiply_operation,6750.0
+10,20,multiply_operation,200.0
+10,5,multiply_operation,50.0
+10,20,add_operation,30.0
+50,50,add_operation,100.0
