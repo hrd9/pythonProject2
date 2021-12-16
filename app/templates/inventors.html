@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block title %}Inventors{% endblock %}
+
+{% block content %}
+
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        a:hover {
+            background-color: #E74C3C;
+            border-color:black;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        /* Create three unequal columns that floats next to each other */
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }  .all-browsers {
+               margin: 5px;
+               padding: 25px;
+
+               background-color: red;
+               background-image: url("Images/Innovation.jpg");
+           }
+
+
+        .all-browsers > h1, .browser {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .browser {
+            background: white;
+        }
+
+        .browser > h2, p {
+            margin: 4px;
+            font-size: 120%;
+        }
+        .p1 {
+            font-family: "Times New Roman", Times, serif;
+            color:black;
+            font-size: 23px;
+        }
+
+    </style>
+    <title>Inventors Page</title>
+</head>
+<body>
+
+<div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+
+    </div>
+    <div class="site-mobile-menu-body"></div>
+</div>
+
+<header class="site-navbar js-sticky-header site-navbar-target">
+
+</header>
+
+<div class="all-browsers">
+    <div class="browser">
+       <img src="{{ url_for('static', filename='images/VintCerf.PNG') }}" alt="Image for Vinf Cerf" align="left" width="450">
+        <h2 style="font-size:30px;">Vinf Cerf</h2>
+        <p class="p1"> Vint Cerf invented the demo protocol that rules them all: TCP/IP. Most people have never heard of it.
+            But it describes the fundamental architecture of the internet, and it made possible Wi-Fi, Ethernet, LANs,
+            the World Wide Web, e-mail, FTP, 3G/4G -- as well as all of the inventions built upon those inventions.
+            Cerf did that in 1973. For most of you that's probably 20 years before you even knew what the internet was.
+            That's why he's known as the father of the internet and earned himself a Presidential Medal of Freedom.
+            Cerf didn't stop there — he went on to co-find the Internet Society (ISOC) and served as president of ICANN,
+            the organization which operates the domain naming system.
+            Prior to rejoining MCI in 1994, Cerf was vice president of the Corporation for National Research Initiatives (CNRI). As vice president of MCI Digital Information Services from 1982-1986, he led the engineering of MCI Mail, the first commercial email service to be connected to the Internet. During his tenure from 1976-1982 with the U.S. Department of Defense's Advanced Research Projects Agency (DARPA), Cerf played a key role leading the development of Internet and Internet-related packet data and security technologies.So, it was pretty much a given that Cerf would be inducted,
+            as he was on Monday, into ISOC's internet Hall of Fame in its inaugural year.He also served from 2000-2007 as chairman of the board of the Internet Corporation for Assigned Names and Numbers (ICANN), an organization he helped form.
+            Cerf served as founding president of the Internet Society from 1992-1995, and in 1999 served a term as Chairman of the Board.His personal interests include fine wine, gourmet cooking and science fiction. Cerf and his wife, Sigrid, were married in 1966 and have two sons, David and Bennett.</p>
+    </div>
+</div>
+
+<div class="all-browsers">
+    <div class="browser">
+        <img src="{{ url_for('static', filename='images/kahn.jpg') }}" alt="Image for Vinf Cerf" align="left" width="450">
+        <h2 style="font-size:30px;">Robert Elliot Kahn</h2>
+        <p class="p1">Robert Kahn is the co-inventor of the TCP/IP protocols and was responsible for originating DARPA’s Internet program. Known as one of the “Fathers of the Internet,” Kahn demonstrated the ARPNET by connecting 20 different computers at the International Computer Communication Conference.
+            While working on the SATNET satellite packet network project, he came up with the initial ideas for what later became the Transmission Control Protocol (TCP), which was intended as a replacement for an earlier network protocol, NCP, used in the ARPANET. TCP played a major role in forming the basis of open-architecture networking, which would allow computers and networks all over the world to communicate with each other, regardless of what hardware or software the computers on each network used.
+            It was then that people realized the importance of packet switching technology.
+            While Director of Information Processing Techniques Office (IPTO) at DARPA, he initiated the United States government's billion-dollar Strategic Computing Program, the largest computer research and development program ever undertaken by the federal government. Dr. Kahn conceived the idea of open-architecture networking and coined the term National Information Infrastructure (NII) in the mid-1980s, which later became more widely known as the Information Superhighway.
+            In December 1997, President Bill Clinton presented the U.S. National Medal of Technology to Kahn and his colleague, Vinton Cerf, for founding and developing the Internet. In 2004, Kahn was the recipient of the ACM Alan M. Turing award (sometimes called the “Nobel Prize of Computer Science”) and in 2005 he was given the Presidential Medal of Freedom by President George Bush.
+    </div>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+{% endblock %}

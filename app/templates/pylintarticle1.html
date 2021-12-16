@@ -1,0 +1,233 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+
+{% block content %}
+
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        a:hover {
+            background-color: #E74C3C;
+            border-color:black;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            display: table;
+            clear: both;
+            border: #005cbf;
+        }.all-browsers {
+             margin: 5px;
+             padding: 25px;
+             background-color: lightgray;
+             background-image: url("Images/Innovation.jpg");
+         }
+
+        .all-browsers > h1, .browser {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .browser {
+            background: white;
+            border: 3px solid cyan;
+        }
+
+        .browser > h2, p {
+            margin: 4px;
+            font-size: 120%;
+        }
+        .p1 {
+            font-family: "Times New Roman", Times, serif;
+            color: black;
+            text-align-all: right;
+        }
+        .image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        } .image1
+                  {
+                      display: block;
+                      margin-left: auto;
+                      margin-right: auto;
+                      width:90%;
+                      margin-bottom: -5rem;
+                  }
+        .image3
+        {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width:90%;
+        } table, th, td {
+                                          border:1px solid black;
+                                      }
+        .imagelogo{
+            width: 120px;
+        }
+        .imagew3{
+            width: 70px;
+        } .imagew4{
+                      width: 40px;
+                  }
+    </style>
+    <title>Python Article 1 : Pylint</title>
+</head>
+<body>
+
+<div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+</div>
+
+<header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+</header>
+
+<article class="all-browsers">
+    <article class="browser">
+        <h2 style="font-size:30px;"><u>Pylint Article</u></h2>
+        <img src="{{ url_for('static', filename='images/Pylint.png') }}" class="image" alt="Image">
+        <p class="p1">
+            The tool that checks for error in the python code and one that tries to enforce standards for coding is known as pylint. It checks for the certain type of error, also is suggests the steps that should be taken into consideration for resolving those errors.It’s highly configurable, having special pragmas to control its errors and warnings from within your code, as well as from an extensive configuration file. It is also possible to write your own plugins for adding your own checks or for extending pylint in one way or another.
+        </p>
+    </article>
+
+    <article class="browser">
+        <h2 style="font-size:30px;"><u>Implementing the Pylint</u></h2>
+        <p class="p1">
+            The steps that are involved in implementation of the pylint are as follows :
+            <br>
+            1)Installation for python packages --
+             Command : pip install pylint
+             <img src="{{ url_for('static', filename='images/Capturet.png') }}"  alt="Image" class="image">
+            <br>2)The pylint command needs to be run in the command line, the usage is as follows :
+            <br><u>Command:</u>pylint [options] modules or packages.
+            <br> For Example: pylint projectcalc/additioncalc_project.py, pylint projectcalc/subtractioncalc_project.py, 3)pylint projectcalc/multiplicationcalc_project.py
+             <img src="{{ url_for('static', filename='images/SS1.png') }}" alt="Image" class="image1">
+        3)Parallel Execution --
+        In order to speed up the execution of the pylint. This functionality is used via the -j command.If the provided number is 0, then the total number of CPUs will be autodetect and used.<br>
+        <u>Command:</u>
+        Eg: pylint -j 4 mymodule1.py mymodule2.py mymodule3.py mymodule4.py
+            <img src="{{ url_for('static', filename='images/Capture3.png') }}" alt="Image" class="image3">
+            <br>
+        4) Exit Codes --
+        Pylint returns bit-encoded exit codes. If applicable, the table below lists the related stderr stream message output.
+        <table style="width:100%">
+            <tr>
+                <th>Exit Code</th>
+                <th>Error Definition</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>Zero Error</td>
+                <td>Whenever pylint exits with zero code, it ensures that no error is existing in code.</td>
+                <td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Fatal Message issued</td>
+                <td>It explains that some fatal error has occured during the execution of the code</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Error Message issued</td>
+                <td>This message lists the modules with the error code present in the project</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Warning Message issued</td>
+                <td>It indicates the warning occured in the program during the run time execution</td>
+            </tr>
+        </table>
+    </article>
+    <article class="browser">
+        <h2 style="font-size:30px;"><u>OOP Glossary List</u></h2>
+        <table style="width:100%">
+            <tr>
+                <th>OOP Terms</th>
+                <th>Definition</th>
+            </tr>
+            <tr>
+                <td>Factory</td>
+                <td>Factory Method is a creational design pattern used to create concrete implementations of a common interface</td>
+            </tr>
+            <tr>
+                <td>Instantiation</td>
+                <td>Instantiation refers for creating an instance of an object. For example, defining one particular variation of object within a class, giving it a name, and locating it in some physical place.</td>
+            </tr>
+            <tr>
+                <td>Object</td>
+                <td>Object refers to any real world entity which can have some characteristics or which can perform some tasks.</td>
+            </tr>
+            <tr>
+                <td>Class</td>
+                <td>A class is the basis of all data in Python, everything is an object in Python, and a class is how an object is defined.
+                    Eg: Our calculator program has its own class of addition, subtraction, division, multiplication for performing its respective operation.</td>
+            </tr>
+            <tr>
+                <td>Namespace</td>
+                <td>It is a way to implement scope.
+                    For example, In Python, each package, module, class, function and method function owns a "namespace" in which variable names are resolved.</td>
+            </tr>
+            <tr>
+                <td>Constructors</td>
+                <td>Constructors are generally used for instantiating an object. The task of constructors is to initialize(assign values) to the data members of the class when an object of the class is created.</td>
+            </tr>
+            <tr>
+                <td>Unit Test</td>
+                <td>Unit tests can pass or fail, and that makes them a great technique to check your <code class=""></code></td>
+            </tr>
+            <tr>
+                <td>Static</td>
+                <td>Static methods are the methods in python that can be called without creating an object of class.</td>
+            </tr>
+            <tr>
+                <td>Class Methods</td>
+                <td>Class methods are methods that are called on the class itself, not on a specific object instance.</td>
+            </tr>
+            <tr>
+                <td>Facade</td>
+                <td>Facade is a structural design pattern that provides a simplified (but limited) interface to a complex system of classes, library or framework.</td>
+            </tr>
+            <tr>
+                <td>Method</td>
+                <td>A method is a function that “belongs to” an object. (In Python, the term method is not unique to class instances: other object types can have methods as well. For example, list objects have methods called append, insert, remove, sort, and so on.</td>
+            </tr>
+
+        </table>
+    </article>
+
+</article>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+{% endblock %}

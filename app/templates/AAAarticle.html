@@ -1,0 +1,262 @@
+{% extends "base.html" %}
+{% block title %}AAA Article{% endblock %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        a:hover {
+            background-color: #E74C3C;
+            border-color:black;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            display: table;
+            clear: both;
+            border: #005cbf;
+        } .all-browsers {
+                      margin: 5px;
+                      padding: 25px;
+                      background-color: lightgray;
+                      background-image: url("Images/Innovation.jpg");
+                  }
+
+        .all-browsers > h1, .browser {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .browser {
+            background: white;
+            border: 3px solid cyan;
+        }
+
+        .browser > h2, p {
+            margin: 4px;
+            font-size: 120%;
+        }
+        .p1 {
+            font-family: "Times New Roman", Times, serif;
+            color: black;
+        } .image {
+                      display: block;
+                      margin-left: auto;
+                      margin-right: auto;
+                      width: 50%;
+                  }
+        .imagel {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+        .image3 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            margin-bottom: -7.5rem;
+        } .image4 {
+                      display: block;
+                      margin-left: auto;
+                      margin-right: auto;
+                      width: 100%;
+                      margin-bottom: -9.5rem;
+                  }
+        .image5 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            margin-bottom: -2rem;
+        }
+        .image1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            margin-bottom: -5rem;
+        }
+        .image2 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            margin-bottom: -8rem;
+        } .image6 {
+                      display: block;
+                      margin-left: auto;
+                      margin-right: auto;
+                      width: 100%;
+                      margin-bottom: -4rem;
+                  }
+        .imagelogo{
+            width: 120px;
+        }
+        .imagew3{
+            width: 70px;
+        }
+        .imagew4{
+            width: 40px;
+        }
+    </style>
+    <title>Python Article 2 : AAA Testing</title>
+</head>
+<body>
+
+<div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+</div>
+
+</header>
+
+<article class="all-browsers">
+    <article class="browser">
+
+        <article class="browser"><h2 style="font-size:30px;"><u>AAA Testing</u></h2>
+            <p class="p1">
+                The AAA Testing focuses on the single action of each test method. The advantage of this focus is that it clearly separates the arrangement of the System Under Test (SUT) and the assertions that are made on it after the action. The designing of the test cases follows a specific patterns which involves test definition with the doc string and arrangement followed by an emptyline. In the In the middle, there is a single line of code - this is the most important part: The Act. Finally there are the Assertions. You can see that the Assert block code lines all start with the orange / brown colour. The detailed steps for performing the AAA Testing is as follows :
+            </p>
+            <img src="{{ url_for('static', filename='images/phase.JPG') }}" class="image" alt="Image">
+        </article>
+
+        <article class="browser">
+            <h3 style="font-size:30px;"><u>1)Definition of the Function: </u></h3>
+            <p class="p1">
+                The definition of the test function is the first step of AAA testing methodology.
+                <br> <u>Example:</u> In our project 2, we have defined different functions as test_project_calculator_addition, test_project_calculator_subtraction,
+                test_project_calculator_multiplication and test_project_calculator_divide for test cases.
+                <img src="{{ url_for('static', filename='images/A1.png') }}" alt="Image" class="image1">
+                <u>Guidelines:</u> <br>
+                1.1)Name your function something descriptive because the function name will be shown when the test fails in Pytest output.
+                <br>1.2)Good test method names can make docstrings redundant in simple tests.
+            </p>
+
+        </article>
+
+        <article class="browser">
+            <h3 style="font-size:30px;"><u>2)Adding Docstrings (Optional step): </u></h3>
+            <p class="p1">
+                An optional short single line statement about the behaviour under test.
+                <br> <u>Example:</u> Added docstring for our calculator operation
+                <img src="{{ url_for('static', filename='images/A2.png') }}" alt="Image" class="image2">
+                <u>Guidelines:</u><br>
+                2.1)Use a single block of code with no empty lines.<br> 2.2) We should not assert in the Arrange block. If you need to make an assertion about your arrangement, then this is a smell that your arrangement is too complicated and should be extracted to a fixture or setup function and tested in its own right.
+                <br>Only prepare non-deterministic results not available after action.
+
+            </p>
+
+        </article>
+
+        <article class="browser">
+            <h3 style="font-size:30px;"><u>3)Arrange</u></h3>
+            <p class="p1">
+                The block of code that sets up the conditions for the test action.
+                <br> <u>Example:</u> In our project 2, we have defined different functions as add_operation, sub_operation, multiply_operation and divide_operation
+                that acts as a conditions for the test cases.
+                <img src="{{ url_for('static', filename='images/A3.png') }}" alt="Image" class="image3">
+                <u>Guidelines:</u> <br>
+                3.1)We should not assert in the Arrange block. If you need to make an assertion about your arrangement, then this is a smell that your arrangement is too complicated and should be extracted to a fixture or setup function and tested in its own right.
+                <br>3.2)Extracting the arrangement code into a fixture and testing that the fixture is establishing the expected conditions as previously mentioned.
+            </p>
+        </article>
+
+        <article class="browser">
+            <h3 style="font-size:30px;"><u>4)Act</u></h3>
+            <p class="p1">
+                The next step of AAA testing method is to act on the designed test case. The line of code where the Action is taken on the System Under Test.
+                <br> <u>Example:</u> The various calculator program are designed in order to act according to the test cases.We
+                have add_operation, sub_operation, multiply_operation and divide_operation for performing this operation.
+                <img src="{{ url_for('static', filename='images/A4.png') }}" alt="Image" class="image4">
+                <u>Guidelines:</u> <br>
+                This makes it easier to distinguish test actions and means you can avoid the hardest job in programming: naming. When every result is called result, then you do not need to waste brain power wondering if it should be item = or response = etc. An added benefit is that you can find test actions easily with a tool like grep.
+
+                Even when there is no result from the action, capture it with result = and then assert result is None. In this way, the SUT’s behaviour is pinned.
+
+                If you struggle to write a single line action, then consider extracting some of that code into your arrangement.
+
+                The action can be wrapped in with ... raises for expected exceptions. In this case your action will be two lines surrounded by empty lines.
+            </p>
+
+        </article>
+
+        <article class="browser">
+            <h3 style="font-size:30px;"><u>5)Assert</u></h3>
+            <p class="p1">
+                The block of code that performs the assertions on the state of the SUT after the action.
+                <br> <u>Example:</u> The assert statements designed for the project compares the actual and expected value in the
+                designed test case.
+                <img src="{{ url_for('static', filename='images/A7.png') }}" alt="Image" class="image5">
+                <u>Guidelines:</u> <br>
+                5.1)Use a single block of code with no empty lines.First test result, then side effects.<br>
+                5.2) Limit the actions that you make in this block. Ideally, no actions should happen, but that is not always possible.
+                Use simple blocks of assertions. <br>
+                5.3)If you find that you are repeatedly writing the same code to extract information from the SUT and perform assertions on it, then consider extracting an assertion helper.
+                Even when there is no result from the action, capture it with result = and then assert result is None. In this way, the SUT’s behaviour is pinned.
+            </p>
+        </article>
+
+        <article class="browser">
+            <h3 style="font-size:30px;"><u>6)Testing Coverage Output</u></h3>
+            <p class="p1">
+                Here is the example of the final testing output that follows the AAA pattern of testing the python modules.The command
+                use for testing the test cases is : pytest --pylint --cov
+                <img src="{{ url_for('static', filename='images/A5.png') }}" alt="Image" class="image6"><br>
+                This output illustrates that all test cases design are covered in the called function, if any of the test cases or method
+                is not used, then it will result in reducing coverage for the same.
+            </p>
+        </article>
+
+        <article class="browser">
+            <h3 style="font-size:30px;"><u>Use of External Data for Testing:</u></h3>
+            <p class="p1">
+                Python unittest library is used to run the unit tests for Python classes and functions. It is a built-in library provided by Python, so you do not need to install any third-party library to use it.
+                Pandas is a powerful and flexible Python package that allows you to work with labeled and time series data.Functions like the Pandas read_csv() method enable you to work with files effectively. You can use them to save the data and labels from Pandas objects to a file and load them later as Pandas Series or DataFrame instances.
+                <img src="{{ url_for('static', filename='images/pandas.jpeg') }}" alt="Image" class="imagel">
+                This output illustrates that all test cases design are covered in the called function, if any of the test cases or method
+                is not used, then it will result in reducing coverage for the same.
+                <u>Steps for running external data csv for testing:</u><br>
+                1. Installing Pandas -- pip install pandas <br>
+                2. Preparing the csv data -- Creating the csv file for loading in the python project <br>
+                3. Using the Pandas read_csv() and .to_csv() Function -- A comma-separated values (CSV) file is a plaintext file with a .csv extension that holds tabular data. This is one of the most popular file formats for storing large amounts of data. Each row of the CSV file represents a single table row. The values in the same row are by default separated with commas, but you could change the separator to a semicolon, tab, space, or some other character.<br>
+                4. Reading the csv files -- Pandas functions for reading the contents of files are named using the pattern .read_[file-type](), where [file-type] indicates the type of the file to read.<br>
+                5. Writing the csv files -- Once you have those packages installed, you can save your DataFrame in an Excel file with .to_excel().
+           <br> In this way, we can use the pandas library from loading the data and labels from Pandas DataFrame objects to different kinds of files. The
+                function read_csv() and .to_csv() allows us to load our data in the single function or method call.
+            </p>
+        </article>
+
+    </article>
+</article>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block title %}Evolution{% endblock %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        a:hover {
+            background-color: #E74C3C;
+            border-color:black;
+            font-size: 20px;
+            font-weight: bolder;
+        } * {
+              box-sizing: border-box;
+          }
+        /* Create three unequal columns that floats next to each other */
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        } .all-browsers {
+                      margin: 5px;
+                      padding: 25px;
+                      background-color: lightgray;
+                      background-image: url("Images/Innovation.jpg");
+                  }
+
+        .all-browsers > h1, .browser {
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .browser {
+            background: white;
+            border: 3px solid cyan;
+        }
+
+        .browser > h2, p {
+            margin: 4px;
+            font-size: 120%;
+        }
+        .p1 {
+            font-family: "Times New Roman", Times, serif;
+            color: black;
+        }
+
+    </style>
+    <title>Navigation Page</title>
+</head>
+<body>
+
+<div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+</div>
+
+</header>
+
+        <article class="all-browsers">
+            <article class="browser">
+                <img src="{{ url_for('static', filename='images/Arpa.jpeg') }}" alt="Image" align="left" width ="250">
+                <h2 style="font-size:30px;">Arpa</h2>
+                <p class="p1">  The Advanced Research Project Agency (ARPA), an arm of the U.S Defense Department funded the development
+                    of the Advanced Research Projects Agency Network (ARPANET) in the late 1960s.
+                    Its initial purpose was to link computers at Pentagon-funded research institutions over telephone lines.
+                    One major obstacle in computer communication was based on the fact, that computers in the 1960s were almost all individual constructions, perfectly fit for the individual purpose of a specific organization or company. There was no such thing as a standard operating system or even a standard way to encode numbers and numerical data. To overcome this difficulty of connecting completely different computer systems all based on different architectures, ARPA Information Processing Techniques Office (IPTO) came up with the
+                    idea of establishing a subnetwork with homogeneous communication processors as relays (so called Internet Message Processors,
+                    IMPs).
+                </p>
+            </article>
+
+            <article class="browser">
+                <img src="{{ url_for('static', filename='images/Apranet.jpg') }}" alt="Image for Arpanet" align="right" width="260">
+                <h2 style="font-size:30px;">Arpanet</h2>
+                <p class="p1">
+                    ARPANET arose from a desire to share information over great distances without the need for dedicated phone connections between each computer on a network. As it turned out, fulfilling this desire would require packet switching. During its first 10 years, ARPANET was a test bed for networking innovations. New applications and protocols like Telnet,
+                    file transfer protocol (FTP), and network control protocol (NCP) were constantly being devised, tested, and deployed on the
+                    network.ARPANET was the network that became the basis for the Internet. Based on a concept first published in 1967, ARPANET was developed under the direction of the U.S. Advanced Research Projects Agency (ARPA).
+                </p>
+            </article>
+
+            <article class="browser">
+                <img src="{{ url_for('static', filename='images/nsfnet.jpg') }}" alt="Iamge for nsfnet" align="left" width="260">
+                <h2 style="font-size:30px;">NSFNET</h2>
+                <p class="p1">
+                    The National Science Foundation’s NSFNET goes online to connected supercomputer centers at 56,000 bits
+                    per second — the speed of a typical dial-up computer modem. Over time the network speeds up and regional
+                    research and education networks, supported in part by NSF, are connected to the NSFNET backbone — effectively
+                    expanding the Internet throughout the United States. The NSFNET was essentially a network of networks that
+                    connected academic users along with the ARPANET.The IMP routes the message to the destination host using protocols that were eventually adopted by Internet routers.
+                    Messages could store a total length of 8159 bits, of which the first 96 were reserved for the header.
+
+                </p>
+            </article>
+
+            <article class="browser">
+                <img src="{{ url_for('static', filename='images/WorldWideWeb.jpg') }}" alt="Image for WorldWideWeb" align="right" width="280">
+                <h2 style="font-size:30px;">World Wide Web</h2>
+                <p class="p1">
+                    The World Wide Web—commonly referred to as WWW, W3, or the Web—is an interconnected system of public webpages accessible through the Internet. The Web is not the same as the Internet: The Web is one of many applications built on top of the Internet. ... hypertext newsgroup, marking the moment the Web was first made public
+                    The resources of the Web are transferred via the Hypertext Transfer Protocol (HTTP), may be accessed by users by a software application called a web browser, and are published by a software application called a web server.
+                    Tim Berners-Lee proposed the architecture of what became known as the World Wide Web. He created the first web server, web browser, and webpage on his computer at the CERN physics research lab in 1990. In 1991, he announced his creation on the alt.hypertext newsgroup, marking the moment the Web was first made public.
+                </p>
+            </article>
+
+        </article>
+
+</body>
+</html>
+{% endblock %}
